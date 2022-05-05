@@ -13,11 +13,8 @@ var isMobile={Android:function(){return navigator.userAgent.match(/Android/i)}
 ,Windows:function(){return navigator.userAgent.match(/IEMobile/i)}
 ,any:function(){return isMobile.Android()||isMobile.BlackBerry()||isMobile.iOS()||isMobile.Opera()||isMobile.Windows()}};
 
-if (isMobile.iOS()) {
+if (isMobile.Android()) {
 <h1>ios>/h1>
-elseif (isMobile.Android) {
-<h1>Andorid</h1>
-}
 }
    </script>
 </body>
