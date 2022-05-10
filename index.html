@@ -2,30 +2,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>devicede</title>
-<script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 <head>
 <body>
-   <script>
-var isMobile={Android:function(){return navigator.userAgent.match(/Android/i)},
-BlackBerry:function(){return navigator.userAgent.match(/BlackBerry/i)},
-iOS:function(){return navigator.userAgent.match(/iPhone|iPad|iPod/i)},
-Opera:function(){return navigator.userAgent.match(/Opera Mini/i)},
-Windows:function(){return navigator.userAgent.match(/IEMobile/i)},
-any:function(){return isMobile.Android()||isMobile.BlackBerry()||isMobile.iOS()||isMobile.Opera()||isMobile.Windows()}};
+<script>
 
-if (isMobile.any()) {
-alert(isMobile)
-}
-   </script>
+var varUA = navigator.userAgent.toLowerCase(); //userAgent 값 얻기
+ 
+    if ( varUA.indexOf('android') > -1) {
+        alert('android')
+       
+    } else if ( varUA.indexOf("iphone") > -1||varUA.indexOf("ipad") > -1||varUA.indexOf("ipod") > -1 ) {
+        
+       alert('ios')
+    } else {
+        
+       alert('Other OS')
+    }
 
-
-<div class="dac-btn-block">
-    
-      <button class="button button-disabled" disabled="">Download Not Available</button>
-      <p>Your current device is not sup.<br>
-      <a href="#Requirements" class="normal">See the system requirements</a>.</p>
-    
-    </div>
-
+</script>
 </body>
 </html>
