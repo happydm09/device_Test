@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -9,13 +10,6 @@ var varUA = navigator.userAgent.toLowerCase();
 var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
 var Ios = [varUA.indexOf("iphone"), varUA.indexOf("ipad")]
 
-function PC_Msg(){
-   var Txt = "<hr3>PC</hr3><br>";
-
-   let div = document.getElementById("div");
-	div.innerHTML = 'PC';
-}
-
     if ( varUA.indexOf('android') > -1) {
         alert('android') 
     } 
@@ -26,15 +20,16 @@ function PC_Msg(){
        if (mobile) { 
         alert('OtherOS')
        }
-       else { 
+       else {
+	let div = document.getElementById("div");
+	div.innerHTML = "PC";
         alert('PC')
-         PC_Msg()
        }
     }
 
 </script> 
 
 <body>
-    <div id="div">...</div>
+    <div id="div"></div>
 </body>
 </html>
