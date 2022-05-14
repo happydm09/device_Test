@@ -10,23 +10,17 @@ var varUA = navigator.userAgent.toLowerCase();
 var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
 var Ios = [varUA.indexOf("iphone"), varUA.indexOf("ipad")]
 
- 
     if ( varUA.indexOf('android') > -1) {
         alert('android') 
     } 
-   else if (Ios[0] ) {
-       alert('iphone')
-   }
-   else if (Ios[1] ) {
-       alert('ipad')
+   else if (|Ios[0]|Ios[1]| ) {
+       alert('ios')
    }
    else {
-       if (mobile) {
-         
+       if (mobile) { 
         alert('OtherOS')
        }
-       else {
-        
+       else {   
         alert('PC')
        }
     }
