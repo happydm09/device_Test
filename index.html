@@ -6,6 +6,9 @@
 </head>
 <body>
 <script>
+	
+	let tag = document.createElement('div');
+	tag.innerHTML = "PC";
 
 var varUA = navigator.userAgent.toLowerCase();
 var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
@@ -22,8 +25,6 @@ var Ios = [varUA.indexOf("iphone"), varUA.indexOf("ipad")]
         alert('OtherOS')
        }
        else {
-	let tag = document.createElement('div');
-	tag.innerHTML = "PC";
         alert('PC')
        }
     }
