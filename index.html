@@ -19,10 +19,10 @@ function AddTXT(){
       tagTXT = '<p><h2>Android 폰/태블릿</h2> \n <h3>당신은 Android 폰 혹은 태블릿으로 접속하셨군요.</h3></p>'
     }
     else if (OS == "Ios") {
-	tagTXT = "<p><h3>ios(아이폰, 아이패드)</h3> \n 당신은 ios 기기(폰, 패드)로 접속하셨습니다.</p>"
+	tagTXT = "<p><h2>ios(아이폰, 아이패드)</h2> <h3>\n 당신은 ios 기기(폰, 패드)로 접속하셨습니다.</h3></p>"
     }
     else if (OS == "PC") {
-	tagTXT = "<p><h3>PC(Mac, Window)</h3> \n 당신은 PC로 접속하셨습니다.</p>"
+	tagTXT = "<p><h2>PC(Mac, Window)</h2> \n <h3>당신은 PC로 접속하셨습니다.</h3></p>"
     }
 	tag.innerHTML = tagTXT;
 	document.body.appendChild(tag);
