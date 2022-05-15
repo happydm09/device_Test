@@ -10,11 +10,23 @@
 var varUA = navigator.userAgent.toLowerCase();
 var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
 var Ios = [varUA.indexOf("iphone"), varUA.indexOf("ipad")]
+var OS_ = null
+
+function AddTXT(){
+	var tag = document.createElement('div');
+	var tagTXT = document.createTextNode(OS_);
+	tag.appendChild(tagTXT);
+	document.body.appendChild( tag );
+}
 
     if ( varUA.indexOf('android') > -1) {
+	OS_ = "android"
+	AddTXT()
         alert('android') 
     } 
    else if (Ios[0] > -1||Ios[1] > -1 ) {
+       OS_ = "Ios"
+       AddTXT()
        alert('ios')
    }
    else {
@@ -22,11 +34,8 @@ var Ios = [varUA.indexOf("iphone"), varUA.indexOf("ipad")]
         alert('OtherOS')
        }
        else {
-	 	
-	var tag = document.createElement('div');
-	var tagTXT = document.createTextNode( 'PC' );
-	tag.appendChild(tagTXT);
-	document.body.appendChild( tag );
+	OS_ = "PC"
+	AddTXT()
         alert('PC')
        }
     }
