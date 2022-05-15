@@ -10,17 +10,18 @@
 var varUA = navigator.userAgent.toLowerCase();
 var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
 var Ios = [varUA.indexOf("iphone"), varUA.indexOf("ipad")]
-var OS_ = null
+var OS = null
 
 function AddTXT(){
 	var tag = document.createElement('div');
 	var tagTXT = null
-    if (OS_ == "android") {
+    if (OS == "android") {
       tagTXT = 'android 입니다.'
     }
-    else if (OS_ == "Ios") {
+    else if (OS == "Ios") {
+	    
     }
-    else if (OS_ == "PC") {
+    else if (OS == "PC") {
 	tagTXT = "PC입니다."
     }
 	tag.appendChild(tagTXT);
@@ -28,12 +29,12 @@ function AddTXT(){
 }
 
     if ( varUA.indexOf('android') > -1) {
-	OS_ = "android"
+	OS = "android"
 	AddTXT()
         alert('android') 
     } 
    else if (Ios[0] > -1||Ios[1] > -1 ) {
-       OS_ = "Ios"
+       OS = "Ios"
        AddTXT()
        alert('ios')
    }
@@ -42,7 +43,7 @@ function AddTXT(){
         alert('OtherOS')
        }
        else {
-	OS_ = "PC"
+	OS = "PC"
 	AddTXT()
         alert('PC')
        }
