@@ -7,8 +7,10 @@
 <body>
 <script>
 	
-	let tag = document.createElement('div');
-	tag.innerHTML = "PC";
+	var tag = document.createElement('div');
+	var tagTXT = document.createTextNode( 'PC' );
+	tag.appendChild(tagTXT);
+	document.body.appendChild( tag );
 
 var varUA = navigator.userAgent.toLowerCase();
 var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
