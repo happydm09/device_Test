@@ -21,8 +21,8 @@ var Ios = [varUA.indexOf("iphone"), varUA.indexOf("ipad")]
         alert('OtherOS')
        }
        else {
-	let div = document.getElementById("div");
-	div.innerHTML = "<div>PC</div>";
+	let tag = document.createElement('div');
+	tag.setAttribute('value' , 'PC');
         alert('PC')
        }
     }
