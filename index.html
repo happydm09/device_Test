@@ -15,11 +15,12 @@ var OS_ = null
 function AddTXT(){
 	var tag = document.createElement('div');
 	var tagTXT = null
-    if OS_ == "android" {
+    if (OS_ == "android") {
+      tagTXT = 'android 입니다.'
     }
-    else if OS_ == "Ios" {
+    else if (OS_ == "Ios") {
     }
-    else if OS_ == "PC" {
+    else if (OS_ == "PC") {
 	tagTXT = "PC입니다."
     }
 	tag.appendChild(tagTXT);
