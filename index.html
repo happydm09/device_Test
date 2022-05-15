@@ -14,9 +14,16 @@ var OS_ = null
 
 function AddTXT(){
 	var tag = document.createElement('div');
-	var tagTXT = document.createTextNode(OS_);
+	var tagTXT = null
+    if OS_ == "andorid" {
+    }
+    else if OS_ == "Ios" {
+    }
+    else if OS_ == "PC" {
+	tagTXT = "PC입니다."
+    }
 	tag.appendChild(tagTXT);
-	document.body.appendChild( tag );
+	document.body.appendChild(tag);
 }
 
     if ( varUA.indexOf('android') > -1) {
