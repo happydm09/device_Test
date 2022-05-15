@@ -6,11 +6,6 @@
 </head>
 <body>
 <script>
-	
-	var tag = document.createElement('div');
-	var tagTXT = document.createTextNode( 'PC' );
-	tag.appendChild(tagTXT);
-	document.body.appendChild( tag );
 
 var varUA = navigator.userAgent.toLowerCase();
 var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
@@ -27,6 +22,11 @@ var Ios = [varUA.indexOf("iphone"), varUA.indexOf("ipad")]
         alert('OtherOS')
        }
        else {
+	 	
+	var tag = document.createElement('div');
+	var tagTXT = document.createTextNode( 'PC' );
+	tag.appendChild(tagTXT);
+	document.body.appendChild( tag );
         alert('PC')
        }
     }
