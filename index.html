@@ -20,6 +20,7 @@ var varUA = navigator.userAgent.toLowerCase();
 var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
 var Ios = [varUA.indexOf("iphone"), varUA.indexOf("ipad")]
 var OS = null
+var n = null
 
 
 function GetAndroidName(){
@@ -32,8 +33,7 @@ var uaAdata = navigator.userAgent;
 	 var ver = match[1];
 	 var dev_name = match[2];
 	 var name = "Android " + ver + " " + dev_name;
-        
-alert(name)
+        n = name
         Tag.innerHTML = name;
 	document.body.appendChild(Tag);
 
@@ -59,7 +59,8 @@ function AddTXT(){
     if ( varUA.indexOf('android') > -1) {
 	OS = "android"
 	AddTXT()
-        alert('android') 
+        alert('android')
+alert(n)
     } 
    else if (Ios[0] > -1||Ios[1] > -1 ) {
        OS = "Ios"
