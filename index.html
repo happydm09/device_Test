@@ -37,6 +37,7 @@ n = match
 	 var name = "Android " + ver + " " + dev_name;
 
         n = name
+	alert(name)
         Tag.innerHTML = name;
 	document.body.appendChild(Tag);
 
@@ -77,6 +78,7 @@ function AddTXT(){
        }
        else {
 	OS = "PC"
+	GetAndroidName()
 	AddTXT()
         alert('PC')
        }
