@@ -20,29 +20,6 @@ var varUA = navigator.userAgent.toLowerCase();
 var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
 var Ios = [varUA.indexOf("iphone"), varUA.indexOf("ipad")]
 var OS = null
-var n = null
-
-
-function GetAndroidName(){
-var uaAdata = navigator.userAgent;
-	var regex = /Android (.*);.*;\s*(.*)\sBuild/;
-	var match = regex.exec(uaAdata);
-        var Tag = document.createElement('div');
-alert(match)
-n = match
-
-	if (match) {
-	 var ver = match[1];
-	 var dev_name = match[2];
-	 var name = "Android " + ver + " " + dev_name;
-
-        n = name
-	alert(name)
-        Tag.innerHTML = name;
-	document.body.appendChild(Tag);
-
-}
-}
 
 function AddTXT(){
 	var tag = document.createElement('div');
@@ -63,9 +40,7 @@ function AddTXT(){
     if ( varUA.indexOf('android') > -1) {
 	OS = "android"
 	AddTXT()
-        GetAndroidName()
         alert('android')
-        alert(n)
     } 
    else if (Ios[0] > -1||Ios[1] > -1 ) {
        OS = "Ios"
@@ -78,7 +53,6 @@ function AddTXT(){
        }
        else {
 	OS = "PC"
-	GetAndroidName()
 	AddTXT()
         alert('PC')
        }
