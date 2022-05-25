@@ -44,12 +44,7 @@ function getAndroidDevName () {
     var regex = /Android(.*)/;
     var match= regex.exec(ua);
 
-    if (match) {
-        var ver = match
-
-        return "Android "+ver
-    }
-    return "unknown";
+    return match;
 }
 
     if ( varUA.indexOf('android') > 0) {
