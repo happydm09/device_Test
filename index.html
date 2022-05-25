@@ -39,10 +39,21 @@ function AddTXT(){
 	document.body.appendChild(tag);
 }
 
-    if ( varUA.indexOf('android') > -1) {
-	OS = "android"
-	AddTXT()
-        alert('android')
+function AndroidDeviceName(){
+  var regex = /Android (.*);.*;\s*(.*)\sBuild/;
+  var match = regex.exec(varUA);
+      if (match) {
+	var ver = match[1];
+	var dev_name = match[2];
+        alert("Android " + ver + " " + dev_name);
+      else {
+        alert('error')
+      }
+    }
+
+}
+    if ( varUA.indexOf('android') > 0) {
+      AndroidDeviceName()
     } 
    else if (Ios[0] > -1||Ios[1] > -1 ) {
        OS = "Ios"
