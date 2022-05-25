@@ -39,20 +39,25 @@ function AddTXT(){
 	document.body.appendChild(tag);
 }
 
-function AndroidDeviceName(){
-  var regex = /Android (.*);.*;\s*(.*)\sBuild/;
-  var match = regex.exec(varUA);
-      if (match) {
-	var ver = match[1];
-	var dev_name = match[2];
-        alert("Android " + ver + " " + dev_name);
-      }
-      else {
-        alert('error')
-      }
+function getAndroidDevName () {
+    var ua = navigator.userAgent;
+    var regex = /Android(.*);.*;\s*(.*)\sBuild/;
+    var match= regex.exec(ua);
+
+    if (match) {
+        var ver = match[1];
+        var dev_name = match[2];
+
+        return "Android "+ver +" "+ dev_name;
+    }
+    return "unknown";
 }
+
     if ( varUA.indexOf('android') > 0) {
-      AndroidDeviceName()
+      var p = null
+      p = getAndroidDevName()
+      
+      alert(p)
     } 
    else if (Ios[0] > -1||Ios[1] > -1 ) {
        OS = "Ios"
