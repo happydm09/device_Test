@@ -41,7 +41,7 @@ function AddTXT(){
 
 function getAndroidDevName () {
     var ua = navigator.userAgent;
-    var regex = /Android(.*);
+    var regex = /Android(.*)/;
     var match= regex.exec(ua);
 
     if (match) {
