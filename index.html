@@ -81,7 +81,12 @@ var start=str.indexOf(';');
 var end=str.indexOf('Build');
 var end2=str.indexOf(')');
 
-var str2=str.substring(start, end|end2);
+var str2=str.substring(start, end2);
+
+if end==true {
+ str2=str.substring(start, end);
+};
+
 var name=str2.substring(2);
 var ver=str.substring(7, start);
 
