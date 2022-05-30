@@ -81,9 +81,9 @@ var start=str.indexOf(';');
 var end=str.indexOf('Build');
 var end2=str.indexOf(')');
 
-var str2=str.substring(start, end);
+var str2=str.substring(start, end|end2);
 var name=str2.substring(2);
-var ver=str.substring(7, start|end2);
+var ver=str.substring(7, start);
 
 alert('Android'+ver+' on '+name);
 
